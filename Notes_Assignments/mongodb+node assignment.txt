@@ -1,0 +1,282 @@
+use library_db1
+switched to db library_db1
+db.createCollection("books")
+{ ok: 1 }
+db.books.insertMany([
+  {
+    title:"Dharm",
+    author:"Vedvyas",
+    genre:"Spirituality",
+    published_year:2020,
+    available_copies:20
+  },
+  {
+    title:"Biryani",
+    author:"Harsh",
+    genre:"recipe",
+    published_year:1999,
+    available_copies:1
+  },
+  {
+    title:"83",
+    author:"ranveer",
+    genre:"sports",
+    published_year:1983,
+    available_copies:3
+  },
+  {
+    title:"Moksh",
+    author:"Vedvyas",
+    genre:"Spirituality",
+    published_year:1221,
+    available_copies:5
+  },
+  {
+    title:"Two Tales",
+    author:"Sara",
+    genre:"Story",
+    published_year:2025,
+    available_copies:2
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1d05af97016ea04a088812'),
+    '1': ObjectId('6a1d05af97016ea04a088813'),
+    '2': ObjectId('6a1d05af97016ea04a088814'),
+    '3': ObjectId('6a1d05af97016ea04a088815'),
+    '4': ObjectId('6a1d05af97016ea04a088816')
+  }
+}
+db.books.find({})
+{
+  _id: ObjectId('6a1d05af97016ea04a088812'),
+  title: 'Dharm',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 2020,
+  available_copies: 20
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088813'),
+  title: 'Biryani',
+  author: 'Harsh',
+  genre: 'recipe',
+  published_year: 1999,
+  available_copies: 1
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088814'),
+  title: '83',
+  author: 'ranveer',
+  genre: 'sports',
+  published_year: 1983,
+  available_copies: 3
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088815'),
+  title: 'Moksh',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 1221,
+  available_copies: 5
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088816'),
+  title: 'Two Tales',
+  author: 'Sara',
+  genre: 'Story',
+  published_year: 2025,
+  available_copies: 2
+}
+db.books.find({'published_year':{$gt:2015}})
+{
+  _id: ObjectId('6a1d05af97016ea04a088812'),
+  title: 'Dharm',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 2020,
+  available_copies: 20
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088816'),
+  title: 'Two Tales',
+  author: 'Sara',
+  genre: 'Story',
+  published_year: 2025,
+  available_copies: 2
+}
+db.books.find({"author":"Vedvyas"})
+{
+  _id: ObjectId('6a1d05af97016ea04a088812'),
+  title: 'Dharm',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 2020,
+  available_copies: 20
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088815'),
+  title: 'Moksh',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 1221,
+  available_copies: 5
+}
+db.books.updateOne({'title':'Moksh'},{'available_copies':{$inc:1}})
+MongoInvalidArgumentError: Update document requires atomic operators
+db.books.updateOne({'title':'Moksh','available_copies':{$inc:1}})
+MongoInvalidArgumentError: Update document requires atomic operators
+db.books.updateOne({'title':'Moksh'},{$inc:{'available_copies:1'}})
+SyntaxError: Unexpected token (1:64)
+
+> 1 | db.books.updateOne({'title':'Moksh'},{$inc:{'available_copies:1'}})
+    |                                                                 ^
+db.books.updateOne({'title':'Moksh'},{$inc:{'available_copies':1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.books.find({})
+{
+  _id: ObjectId('6a1d05af97016ea04a088812'),
+  title: 'Dharm',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 2020,
+  available_copies: 20
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088813'),
+  title: 'Biryani',
+  author: 'Harsh',
+  genre: 'recipe',
+  published_year: 1999,
+  available_copies: 1
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088814'),
+  title: '83',
+  author: 'ranveer',
+  genre: 'sports',
+  published_year: 1983,
+  available_copies: 3
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088815'),
+  title: 'Moksh',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 1221,
+  available_copies: 6
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088816'),
+  title: 'Two Tales',
+  author: 'Sara',
+  genre: 'Story',
+  published_year: 2025,
+  available_copies: 2
+}
+db.books.updateMany({'available_copies':{$gt:0}},{$inc:{'available_copies':-1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+db.books.find({})
+{
+  _id: ObjectId('6a1d05af97016ea04a088812'),
+  title: 'Dharm',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 2020,
+  available_copies: 19
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088813'),
+  title: 'Biryani',
+  author: 'Harsh',
+  genre: 'recipe',
+  published_year: 1999,
+  available_copies: 0
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088814'),
+  title: '83',
+  author: 'ranveer',
+  genre: 'sports',
+  published_year: 1983,
+  available_copies: 2
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088815'),
+  title: 'Moksh',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 1221,
+  available_copies: 5
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088816'),
+  title: 'Two Tales',
+  author: 'Sara',
+  genre: 'Story',
+  published_year: 2025,
+  available_copies: 1
+}
+db.books.deleteOne({'_id':ObjectId('6a1d05af97016ea04a088816')})
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.books.find({})
+{
+  _id: ObjectId('6a1d05af97016ea04a088812'),
+  title: 'Dharm',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 2020,
+  available_copies: 19
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088813'),
+  title: 'Biryani',
+  author: 'Harsh',
+  genre: 'recipe',
+  published_year: 1999,
+  available_copies: 0
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088814'),
+  title: '83',
+  author: 'ranveer',
+  genre: 'sports',
+  published_year: 1983,
+  available_copies: 2
+}
+{
+  _id: ObjectId('6a1d05af97016ea04a088815'),
+  title: 'Moksh',
+  author: 'Vedvyas',
+  genre: 'Spirituality',
+  published_year: 1221,
+  available_copies: 5
+}
+db.books.deleteMany({'available_copies':0})
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.books.deleteMany({'available_copies':0})
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.books.find({})

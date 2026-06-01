@@ -1,0 +1,153 @@
+1. Set up a MongoDB database named "CRUD_DB".
+
+use crud_db
+
+2. Create a collection named "users" within the "CRUD_DB" database.
+
+db.createCollection("users")
+
+3. Insert at least 5 documents into the "users" collection, each representing a user with fields such as name, age,
+email, and country.
+
+db.users.insertMany([
+  {
+    name:"harsh",
+    age:23,
+    email:"harsh@gmail.com",
+    country:"India"
+  },
+  {
+    name:"omkar",
+    age:24,
+    email:"omkar@gmail.com",
+    country:"Pakistan"
+  },
+  {
+    name:"om",
+    age:21,
+    email:"om@gmail.com",
+    country:"China"
+  },
+  {
+    name:"rohit",
+    age:25,
+    email:"rohit@gmail.com",
+    country:"Afghanistan"
+  },
+  {
+    name:"rupesh",
+    age:28,
+    email:"rupesh@gmail.com",
+    country:"England"
+  }
+  ])
+
+4. Ensure that each document has a unique identifier.
+Automatically created by MongoDB
+
+5. Retrieve and display all documents from the "users" collection.
+
+db.users.find({})
+
+6. Find and display users who are between 25 and 35 years old.
+
+db.users.find({age:{$gt:25,$lt:35}})
+
+7. Find and display users who are from a specific country (e.g., "USA").
+
+db.users.find({country:"India"})
+
+8. Update the email address of a user.
+
+db.users.updateOne({name:"harsh"},{$set:{email:"harsh12@gmail.com"}})
+
+9. Increment the age of users who are above 30 by 1 year.
+
+db.users.updateMany({age:{$gt:30}},{$inc:{age:1}})
+
+10. Delete a user document from the collection.
+
+db.users.deleteOne({name:"rupesh"})
+
+11. Delete all users who are below 25 years old.
+
+db.users.deleteMany({age:{$lt:25}})
+
+12. Set up a MongoDB database named "Product_DB".
+
+use product_db
+
+13. Create a collection named "products" within the "Product_DB" database.
+
+db.createCollection("products")
+
+14. Insert at least 5 documents into the "products" collection, each representing a product with fields such as name,
+category, price, and quantity.
+
+db.products.insertMany([
+  {
+    name:"realme 14 pro plus",
+    category:"electronics",
+    price:35000,
+    quantity:1
+  },
+  {
+    name:"Dark Chocolate",
+    category:"Chocolate",
+    price:30,
+    quantity:2
+  },
+  {
+    name:"Ovan",
+    category:"Home Appliances",
+    price:9000,
+    quantity:1
+  },
+  {
+    name:"Mango",
+    category:"fruits",
+    price:1200,
+    quantity:12
+  },
+  {
+    name:"Cocktail",
+    category:"Juice",
+    price:40,
+    quantity:2
+  }
+])
+
+15. Ensure that each product has a unique identifier
+
+automatically done by mongodb
+
+16.Retrieve and display all documents from the "products" collection
+
+db.products.find({})
+
+17.Find and display products within a specific price range (e.g., between $20 and $50).
+
+db.products.find({price:{$gt:20,$lt:50}})
+
+18. Find and display products in a particular category (e.g., "Electronics").
+
+db.products.find({category:"electronics"})
+
+19.Update the price of a product.
+
+db.products.updateOne({name:"Dark Chocolate"},{$set:{price:60}})
+
+20. Decrement the quantity of products that are currently in stock.
+
+db.products.updateMany({quantity:{$gt:0}},{$inc:{quantity:-1}})
+
+21.Delete a product document from the collection.
+
+db.products.deleteOne({name:"Mango"})
+
+
+22.Delete all products that are out of stock.
+
+db.products.deleteMany({quantity:{quantity:0}})
+
+

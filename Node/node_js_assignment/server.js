@@ -1,0 +1,306 @@
+const http=require("http")
+const server=http.createServer((req,res)=>{
+    switch(req.url){
+        case "/":
+            res.end(
+                `<!doctype html>
+                <html lang="en" data-bs-theme="light">
+                    <head>
+                        <title>Title</title>
+                        <!-- Required meta tags -->
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1" />
+                
+                        <!-- Bootstrap CSS v5.3.8 -->
+                        <link
+                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                            rel="stylesheet"
+                            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                            crossorigin="anonymous"
+                        />
+                    </head>
+                
+                    <body>
+                        <header>
+                            <!-- place navbar here -->
+                        </header>
+                        <main>
+                            <div
+                                class="container rounded shadow border mt-5 p-3 col-4"
+                            >
+                                <form>
+                                    <h1 class="text-center">Welcome to Home Page</h1>
+                                    <div class="mb-3">
+                                        
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="email"
+                                            id=""
+                                            aria-describedby="helpId"
+                                            placeholder="Name"
+                                        />
+                                        
+                                    </div>
+
+                                    <div class="mb-3">
+                                        
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            name="email"
+                                            id=""
+                                            aria-describedby="helpId"
+                                            placeholder="email"
+                                        />
+                                        
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            name="password"
+                                            id=""
+                                            placeholder="password"
+                                        />
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                    >
+                                        Submit
+                                    </button>
+                                    
+                                    
+                                </form>
+                            </div>
+                            
+                        </main>
+                        <footer>
+                            <!-- place footer here -->
+                        </footer>
+                        <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                            crossorigin="anonymous"
+                        ></script>
+                    </body>
+                </html>`
+                
+                
+            )
+            break;
+        case "/about":
+            res.end(
+                `<!doctype html>
+                <html lang="en" data-bs-theme="light">
+                    <head>
+                        <title>Title</title>
+                        <!-- Required meta tags -->
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1" />
+                
+                        <!-- Bootstrap CSS v5.3.8 -->
+                        <link
+                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                            rel="stylesheet"
+                            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                            crossorigin="anonymous"
+                        />
+                    </head>
+                
+                    <body>
+                        <header>
+                            <!-- place navbar here -->
+                        </header>
+                        <main>
+                            <!doctype html>
+                            <html lang="en" data-bs-theme="light">
+                                <head>
+                                    <title>Title</title>
+                                    <!-- Required meta tags -->
+                                    <meta charset="utf-8" />
+                                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                            
+                                    <!-- Bootstrap CSS v5.3.8 -->
+                                    <link
+                                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                                        rel="stylesheet"
+                                        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                                        crossorigin="anonymous"
+                                    />
+                                </head>
+                            
+                                <body>
+                                    <header>
+                                        <!-- place navbar here -->
+                                    </header>
+                                    <main>
+                                        <div
+                                            class="alert alert-primary alert-dismissible fade show"
+                                            role="alert"
+                                        >
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="alert"
+                                                aria-label="Close"
+                                            ></button>
+                                        
+                                            <strong>Hello User!</strong> We are here since 1947
+                                        </div>
+                                        
+                                    </main>
+                                    <footer>
+                                        <!-- place footer here -->
+                                    </footer>
+                                    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+                                    <script
+                                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                                        crossorigin="anonymous"
+                                    ></script>
+                                </body>
+                            </html>
+                            
+                        </main>
+                        <footer>
+                            <!-- place footer here -->
+                        </footer>
+                        <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                            crossorigin="anonymous"
+                        ></script>
+                    </body>
+                </html>`
+                
+                
+            )
+            break;
+        case "/contact":
+            res.end(
+                `<!doctype html>
+                <html lang="en" data-bs-theme="light">
+                    <head>
+                        <title>Title</title>
+                        <!-- Required meta tags -->
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1" />
+                
+                        <!-- Bootstrap CSS v5.3.8 -->
+                        <link
+                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                            rel="stylesheet"
+                            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                            crossorigin="anonymous"
+                        />
+                    </head>
+                
+                    <body>
+                        <header>
+                            <!-- place navbar here -->
+                        </header>
+                        <main>
+                            <div
+                                class="table-responsive"
+                            >
+                                <table
+                                    class="table table-primary"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Company Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Contact</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="">
+                                            <td scope="row">SDAC</td>
+                                            <td>sdac@gmail.com</td>
+                                            <td>1234567890</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </main>
+                        <footer>
+                            <!-- place footer here -->
+                        </footer>
+                        <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                            crossorigin="anonymous"
+                        ></script>
+                    </body>
+                </html>`
+            )
+            break;
+        default:
+            res.end(
+                `<!doctype html>
+                <html lang="en" data-bs-theme="light">
+                    <head>
+                        <title>Title</title>
+                        <!-- Required meta tags -->
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1" />
+                
+                        <!-- Bootstrap CSS v5.3.8 -->
+                        <link
+                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                            rel="stylesheet"
+                            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                            crossorigin="anonymous"
+                        />
+                    </head>
+                
+                    <body>
+                        <header>
+                            <!-- place navbar here -->
+                        </header>
+                        <main>
+                            <div
+                                class="alert alert-primary alert-dismissible fade show"
+                                role="alert"
+                            >
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close"
+                                ></button>
+                            
+                                <strong>404!</strong> Page not found!
+                            </div>
+                            
+                        </main>
+                        <footer>
+                            <!-- place footer here -->
+                        </footer>
+                        <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                            crossorigin="anonymous"
+                        ></script>
+                    </body>
+                </html>`
+                
+            )
+            break;
+            
+    }
+})
+
+server.listen('4000',()=>{
+    console.log("server running")
+})
