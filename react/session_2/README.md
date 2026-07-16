@@ -1,39 +1,59 @@
 # 🚀 React Conditional Rendering
 
-A React application built with **Vite** to demonstrate different concepts of **Conditional Rendering** and **Props** in React. This project includes examples of rendering components based on conditions, passing props between components, and basic page navigation.
+A React application built with **Vite** to demonstrate different concepts of **Conditional Rendering**, **Props**, and **React Router**. This project includes examples of rendering components based on different conditions, passing data between components using props, and implementing basic page navigation.
+
+---
+
+# 📌 Objective
+
+The primary objective of this project is to understand the core concepts of React by implementing:
+
+* Conditional Rendering using different techniques.
+* Passing data through Props.
+* Reusable Functional Components.
+* Basic Routing with React Router.
+* Clean project organization using Vite.
 
 ---
 
 ## ✨ Features
 
-- Conditional Rendering using `if...else`
-- Conditional Rendering using the Ternary (`? :`) Operator
-- Conditional Rendering using Logical `&&`
-- Switch-based Rendering
-- React Props Examples
-- Simple Multi-page UI (Home, About, Contact)
-- Built with React + Vite
+* Conditional Rendering using `if...else`
+* Conditional Rendering using the Ternary (`? :`) Operator
+* Conditional Rendering using Logical `&&`
+* Switch-based Rendering
+* React Props Examples
+* Reusable Functional Components
+* Simple Multi-page UI (Home, About, Contact)
+* React Router Navigation
+* Built with React + Vite
 
 ---
 
 ## 🛠️ Tech Stack
 
-- React
-- Vite
-- JavaScript (ES6+)
-- CSS
+* React
+* Vite
+* JavaScript (ES6+)
+* React Router DOM
+* CSS3
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-src/
-├── assets/
-├── components/
-├── App.jsx
-├── main.jsx
-└── index.css
+session_2/
+├── screenshots/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
 ---
@@ -93,13 +113,13 @@ src/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/harshgupta73/conditional_rendering.git
+git clone https://github.com/harshgupta73/MERN_SDAC.git
 ```
 
-### Navigate to the project
+### Navigate to the project directory
 
 ```bash
-cd conditional_rendering
+cd MERN_SDAC/react/session_2
 ```
 
 ### Install dependencies
@@ -124,15 +144,30 @@ http://localhost:5173
 
 ## 📖 Concepts Covered
 
-- React Components
-- JSX
-- Props
-- Conditional Rendering
-- `if...else`
-- Ternary Operator
-- Logical `&&`
-- Switch Statement
-- Component Reusability
+* React Components
+* JSX
+* Props
+* Conditional Rendering
+* `if...else`
+* Ternary Operator (`? :`)
+* Logical `&&`
+* Switch Statement
+* React Router
+* Component Reusability
+* Vite Project Structure
+
+---
+
+## 📚 Learning Outcomes
+
+After completing this project, you will be able to:
+
+* Understand how conditional rendering works in React.
+* Pass data between components using Props.
+* Build reusable functional components.
+* Implement basic routing using React Router.
+* Organize a React application using Vite.
+* Develop simple and maintainable React applications.
 
 ---
 
@@ -142,6 +177,10 @@ http://localhost:5173
 
 GitHub: https://github.com/harshgupta73
 
+Repository: https://github.com/harshgupta73/MERN_SDAC/tree/main/react/session_2
+
 ---
 
-## ⭐ If you found this project helpful, consider giving it a star!
+## ⭐ Support
+
+If you found this project helpful, consider giving the repository a ⭐ on GitHub. Your support is greatly appreciated!
