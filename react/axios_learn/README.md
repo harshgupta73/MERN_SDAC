@@ -86,14 +86,13 @@ npm run dev
 
 ## Multiple Posts
 
-![Multiple Posts](./screenshots/posts.png)
+![Multiple Posts](./src/screenshots/posts.png)
 
 ---
 
 ## Single Post
 
-![Single Post](./screenshots/post.png)
-
+![Single Post](./src/screenshots/post.png)
 ---
 
 # 📖 Concepts Covered
