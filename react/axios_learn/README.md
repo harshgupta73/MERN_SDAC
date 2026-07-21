@@ -1,16 +1,137 @@
-# React + Vite
+# ⚛️ React Hooks Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React application built with **Vite** to demonstrate the usage of some of the most commonly used React Hooks, including **useEffect**, **useReducer**, and the **Context API**. The project also fetches data from a public REST API and implements a light/dark theme toggle using Context.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# ✨ Features
 
-## React Compiler
+* 📄 Fetch and display multiple posts using `useEffect`
+* 📌 Fetch a single post by ID
+* 🔄 State management using `useReducer`
+* 🎨 Light/Dark Theme Toggle using Context API
+* ⚡ Built with Vite for fast development
+* 📱 Responsive and clean UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+# 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* React
+* Vite
+* JavaScript (ES6+)
+* CSS
+* Context API
+* useEffect
+* useReducer
+* Fetch API
+
+---
+
+# 📂 Project Structure
+
+```text
+react-hooks-demo/
+│── public/
+│── screenshots/
+│   ├── post.png
+│   └── posts.png
+│── src/
+│   ├── components/
+│   │   ├── FetchMultiPost.jsx
+│   │   ├── FetchSinglePost.jsx
+│   │   ├── UseReducer.jsx
+│   │   ├── ThemeContext.jsx
+│   │   └── ThemedComponent.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+│── package.json
+│── vite.config.js
+│── README.md
+```
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder
+
+```bash
+cd react-hooks-demo
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+# 📸 Screenshots
+
+## Multiple Posts
+
+![Multiple Posts](./screenshots/posts.png)
+
+---
+
+## Single Post
+
+![Single Post](./screenshots/post.png)
+
+---
+
+# 📖 Concepts Covered
+
+### useEffect
+
+* Fetching API data
+* Handling side effects
+* Component lifecycle
+
+### useReducer
+
+* Managing complex state
+* Dispatching actions
+* Reducer functions
+
+### Context API
+
+* Creating Context
+* Providing Context using `ThemeProvider`
+* Consuming Context with `useContext`
+* Theme switching (Light/Dark)
+
+---
+
+# 🎯 Learning Outcomes
+
+After completing this project, you will understand how to:
+
+* Fetch data from REST APIs
+* Display lists of data in React
+* Manage state using `useReducer`
+* Share data across components using Context API
+* Implement a Light/Dark Theme
+* Organize React components effectively
+
+---
+
+# 📄 License
+
+This project is created for learning and educational purposes.

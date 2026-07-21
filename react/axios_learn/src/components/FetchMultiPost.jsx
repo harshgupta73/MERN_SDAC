@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
+import { ThemeContext } from './ThemeContext';
 const FetchMultiPost = () => {
+  const { theme } = useContext(ThemeContext);
   const[posts,setPosts]=useState([])
 
   useEffect(()=>{
@@ -13,7 +15,12 @@ const FetchMultiPost = () => {
   },[])
 
   return (
-    <div>
+    <div
+        // style={{
+        //     background: theme === "light" ? "#fff" : "#333",
+        //     color: theme === "light" ? "#000" : "#fff",
+        // }}
+    >
         <ul>
             {
                 posts.map((post)=>(

@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
+import { ThemeContext } from './ThemeContext';
 const FetchSinglePost = () => {
+  const { theme } = useContext(ThemeContext);
   const[post,setPost]=useState({})
   const[id,setId]=useState(0)
   const[buttonClicked,setButtonClicked]=useState(0)
@@ -18,7 +20,12 @@ const FetchSinglePost = () => {
     });
   },[buttonClicked])
   return (
-    <div>
+    <div
+      // style={{
+      //   background: theme === "light" ? "#fff" : "#333",
+      //   color: theme === "light" ? "#000" : "#fff",
+      // }}
+    >
         <input type="text" onChange={(e)=>setId(e.target.value)}/>
         <button onClick={handleClick}>Submit</button>
         <h1>{post.title}</h1>
